@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import datetime
 import logging
-import traceback,time
+import time
 import pandas as pd
 import datetime
 new_list=[]
@@ -109,8 +109,7 @@ if __name__ == "__main__":
 
     # get the link for the next week and follow
         startlink+=datetime.timedelta(days=1)
-        df=pd.DataFrame(new_list)
-        df.to_csv("Newsdata.csv",index=False)
+        time.sleep(1)
 
     df=pd.DataFrame(new_list)
 
